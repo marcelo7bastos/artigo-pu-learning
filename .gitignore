@@ -1,0 +1,74 @@
+# Dados confidenciais e volumosos
+dados/
+
+# Microdados / dados pessoais — não versionar (reforço LGPD / Open Code)
+data/
+raw/
+brutos/
+processed/
+interim/
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.xlsx
+*.xls
+*.dta
+*.sav
+*.por
+*.pkl
+*.pickle
+*.db
+*.sqlite
+*.sqlite3
+*.h5
+*.hdf5
+# Exceção: permita arquivos de exemplo/sintéticos explícitos
+!**/sample_*.csv
+!**/sintetico_*.csv
+
+# Segredos / credenciais — nunca versionar
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+credentials
+.netrc
+.npmrc
+.pypirc
+service-account*.json
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+ENV/
+
+# Cache e binários Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+.pytest_cache/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs e temporários
+*.log
+*.tmp
+*.bak
+/anotacoes_para_artigo.txt

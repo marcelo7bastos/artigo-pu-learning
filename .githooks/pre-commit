@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+set -eu
+
+echo "[pre-commit] Verificando notebooks sem outputs..."
+if python scripts/strip_notebook_outputs.py --check; then
+  exit 0
+fi
+
+echo "[pre-commit] Limpando outputs automaticamente..."
+python scripts/strip_notebook_outputs.py
+git add notebooks
+
+echo "[pre-commit] Outputs removidos e arquivos atualizados."
+echo "[pre-commit] Revise o diff e execute o commit novamente."
+exit 1
